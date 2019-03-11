@@ -14,6 +14,9 @@ options {
 <% if @listen_on_v6 -%>
 	listen-on-v6 <%= @listen_on_v6 %>;
 <% end -%>
+<% if @forwarders -%>
+	forwarders <%= @forwarders %>;
+<% end -%>
 <% if @directory -%>
 	directory 	<%= @directory %>;
 <% end -%>

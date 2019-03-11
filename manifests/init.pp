@@ -25,6 +25,7 @@ class bind (
   $acl                    = [],
   $listen_on              = undef,
   $listen_on_v6           = undef,
+  $forwarders             = undef,
   $directory              = undef,
   $dump_file              = undef,
   $statistics_file        = undef,
@@ -48,6 +49,7 @@ class bind (
   $interface_interval     = undef,
   $max_ncache_ttl         = undef,
   $nnotify                = undef,
+
   $logging                = undef,
   $zone                   = [],
   $include                = [],
