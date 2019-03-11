@@ -101,10 +101,19 @@ options {
 };
 <% if @logging -%>
 logging {
-        channel default_debug {
-                file "data/named.run";
-                severity dynamic;
-        };
+    channel main_log {
+        file "/var/log/named/named.log" versions 3 size 5m;
+        severity info;
+        print-time yes;
+        print-severity yes;
+        print-category yes;
+    };
+    category default{
+        main_log;
+    };
+    category lame-servers {
+        null;
+    };
 };
 <% end -%>
 <% if !@zone.empty? -%>
