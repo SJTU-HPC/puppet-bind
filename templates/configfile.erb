@@ -116,6 +116,9 @@ logging {
     };
 };
 <% end -%>
+<% if @filter_aaaa_on_v4 -%>
+	  filter-aaaa-on-v4 <%= @filter_aaaa_on_v4 %>;
+<% end -%>
 <% if !@zone.empty? -%>
 <% @zone.each do |key,value| -%>
 zone "<%= key %>" IN {

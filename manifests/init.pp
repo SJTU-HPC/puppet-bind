@@ -49,8 +49,8 @@ class bind (
   $interface_interval     = undef,
   $max_ncache_ttl         = undef,
   $nnotify                = undef,
-
   $logging                = undef,
+  $filter_aaaa_on_v4      = undef,
   $zone                   = [],
   $include                = [],
 ) inherits ::bind::params {

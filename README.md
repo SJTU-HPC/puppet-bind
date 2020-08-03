@@ -39,6 +39,7 @@ class { 'bind':
     max_ncache_ttl         => '3600',
     nnotify                => 'no',
     logging                => true,
+    filter_aaaa_on_v4      => 'no',
     zone                   => {
       'example.com' => [
         'type master',
